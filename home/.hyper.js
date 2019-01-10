@@ -6,9 +6,9 @@
 // Stolen from https://github.com/ghosh/hyper-solarized-dark/blob/master/index.js
 // till https://github.com/ghosh/hyper-solarized-dark/pull/17 merges
 // >>>>>>>>> BEGIN SOLARIZED <<<<<<<<<
-const backgroundImage = '/home/suki/.hyper_plugins/terminal-background.jpg';
-const termColor = 'rgba(0, 43, 54, 0.8)';
-const backgroundColor = '#002b36';
+const backgroundImage = '.hyper_plugins/terminal-background.jpg';
+const baseColor = '#002b36';
+const backgroundColor = 'rgba(0, 43, 54, 0.8)';
 const foregroundColor = '#839496';
 const cursorColor = 'rgba(181, 137, 0, 0.6)';
 const borderColor = 'transparent';
@@ -70,14 +70,14 @@ module.exports = {
     // terminal background color
     // opacity is only supported on macOS
     // backgroundColor: '#000',
-    backgroundColor: 'transparent',
+    backgroundColor,
 
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
 
     // border color (window, tabs)
     // borderColor: '#333',
-    borderColor: termColor,
+    borderColor: backgroundColor,
 
     // custom CSS to embed in the main window
     // css: `
@@ -98,7 +98,7 @@ module.exports = {
         font-weight: 500;
       }
       .header_windowHeader {
-        background-color: ${termColor};
+        background-color: ${backgroundColor};
       }
       .tabs_list {
       	border: 0;
@@ -118,17 +118,10 @@ module.exports = {
         border: transparent;
         font-weight: bold;
         color: #b3b3b3;
-        background-color: ${backgroundColor};
+        background-color: ${baseColor};
       }
       .splitpane_divider {
       	background-color: #001f27;
-      }
-      .hyper_main {
-        background: url(file://${backgroundImage}) center;
-        background-size: cover;
-      }
-      .terms_terms {
-        background-color: ${termColor};
       }
     `,
 
@@ -222,7 +215,6 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    // "hyper-background",
     "hyperminimal",
     "hyper-emoji",
     "hyperfull",
@@ -233,7 +225,9 @@ module.exports = {
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  localPlugins: [
+    "hyper-background"
+  ],
 
   keymaps: {
     // Example

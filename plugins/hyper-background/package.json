@@ -1,0 +1,9 @@
+{
+  "name": "hyper-background",
+  "version": "1.0.0",
+  "description": "My own version of RSG-Group/hyper-background",
+  "main": "index.js",
+  "author": "Devin Weaver (@sukima) <suki@tritarget.org> (https://tritarget.org/)",
+  "license": "MIT",
+  "private": true
+}
