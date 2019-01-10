@@ -91,20 +91,20 @@ module.exports = {
     //     background: rgba(0, 0, 0, 0.6) !important;
     //   }
     //   .tabs_nav {
-    // 	    background-color: #001f27;
+    //      background-color: #001f27;
     //   }
     // `,
 
     css: `
       * {
-      	text-rendering: optimizeLegibility;
+        text-rendering: optimizeLegibility;
         font-weight: 500;
       }
       .header_windowHeader {
         background-color: ${backgroundColor};
       }
       .tabs_list {
-      	border: 0;
+        border: 0;
       }
       .tab_tab {
         color: ${foregroundColor};
@@ -112,7 +112,7 @@ module.exports = {
         border-color: ${borderColor};
       }
       .tab_tab:before {
-      	border: 0;
+        border: 0;
       }
       .tab_tab.tab_active {
         border: transparent;
@@ -121,7 +121,7 @@ module.exports = {
         background-color: ${baseColor};
       }
       .splitpane_divider {
-      	background-color: #001f27;
+        background-color: #001f27;
       }
     `,
 
