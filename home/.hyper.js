@@ -90,6 +90,9 @@ module.exports = {
     //   .terms_termGroup {
     //     background: rgba(0, 0, 0, 0.6) !important;
     //   }
+    //   .tabs_nav {
+    // 	    background-color: #001f27;
+    //   }
     // `,
 
     css: `
@@ -102,9 +105,6 @@ module.exports = {
       }
       .tabs_list {
       	border: 0;
-      }
-      .tabs_nav {
-      	background-color: #001f27;
       }
       .tab_tab {
         color: ${foregroundColor};
